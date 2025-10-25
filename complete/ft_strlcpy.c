@@ -1,43 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrunjes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/24 12:42:40 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/10/25 15:34:05 by abrunjes         ###   ########.fr       */
+/*   Created: 2025/10/24 18:35:44 by abrunjes          #+#    #+#             */
+/*   Updated: 2025/10/25 15:34:26 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+size_t	ft_strlcpy( char *dst, const char *src, size_t size)
 {
-	unsigned char	*t;
-	size_t			i;
+	size_t	src_len;
+	size_t	i;
 
-	t = (unsigned char *)s;
 	i = 0;
-	while (i < n)
+	src_len = 0;
+	while (src[src_len])
+		src_len++;
+	if (size == 0)
+		return (src_len);
+	while (i < size - 1 && src[i])
 	{
-		t[i] = (unsigned char) c;
+		dst[i] = src[i];
 		i++;
 	}
-	return (s);
+	dst[i] = 0;
+	return (src_len);
 }
+
 /*
 #include <stdio.h>
-#include <string.h>
+
 int main(void)
 {
-	char t[] = "ALEX";
-	char t2[] = "ALEX";
-	int c = 'A';
-	size_t n = strlen(t);
-	printf(" Before: %s \n", t);
-	ft_memset(t,c,n);
-	memset(t2, c, n);
-	printf(" After: %s \n", t);
-	printf("%d \n", memcmp(t, t2, n));
-}*/
+	const char *src = "HelloAlex";
+	char dst[50];
+	size_t n = 4;
+
+	printf("Ft_strlcpy output is: %lu\n", ft_strlcpy(dst,src,n));
+	printf("Dest has changed to: %s\n", dst);
+	return 0;
+}
+*/

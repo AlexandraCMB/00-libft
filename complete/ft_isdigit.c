@@ -6,11 +6,11 @@
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:03:52 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/10/23 21:12:17 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/10/25 15:33:34 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_isdigit(int a)
 {

@@ -6,9 +6,11 @@
 /*   By: abrunjes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:09:26 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/10/24 18:34:47 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/10/25 15:32:02 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_bzero(void	*s, size_t n)
 {

@@ -6,11 +6,11 @@
 /*   By: abrunjes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 11:17:26 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/10/24 12:42:09 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/10/25 15:34:39 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
