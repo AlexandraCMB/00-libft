@@ -1,48 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrunjes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/24 18:35:44 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/10/25 15:34:26 by abrunjes         ###   ########.fr       */
+/*   Created: 2025/10/24 10:54:30 by abrunjes          #+#    #+#             */
+/*   Updated: 2025/10/26 11:40:53 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy( char *dst, const char *src, size_t size)
+int	ft_isascii(int c)
 {
-	size_t	src_len;
-	size_t	i;
-
-	i = 0;
-	src_len = 0;
-	while (src[src_len])
-		src_len++;
-	if (size == 0)
-		return (src_len);
-	while (i < size - 1 && src[i])
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = 0;
-	return (src_len);
+	if (c >= 0 && c < 128)
+		return (1);
+	else
+		return (0);
 }
-
 /*
 #include <stdio.h>
 
-int main(void)
+int main (void)
 {
-	const char *src = "HelloAlex";
-	char dst[50];
-	size_t n = 4;
-
-	printf("Ft_strlcpy output is: %lu\n", ft_strlcpy(dst,src,n));
-	printf("Dest has changed to: %s\n", dst);
+	int a = 's';
+	int b = 'S';
+	int c = '*';
+	int d = 1;
+	int e = '7';
+	printf("Yes = 1, No = 0\n");
+	printf(" Is %c alpha?:%d \n", a, ft_isascii(a));
+	printf(" Is %c alpha?:%d \n", b, ft_isascii(b));
+	printf(" Is %c alpha?:%d \n", c, ft_isascii(c));
+	printf(" Is %c alpha?:%d \n", d, ft_isascii(d));
+	printf(" Is %c alpha?:%d \n", e, ft_isascii(e));
 	return 0;
 }
 */

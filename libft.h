@@ -6,16 +6,18 @@
 /*   By: abrunjes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 18:20:41 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/10/25 18:57:52 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/10/26 16:01:27 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifdef LIBFT_H
+#ifndef LIBFT_H
 #define LIBFT_H
 
 #include <unistd.h>
 #include <stdio.h>
 #include <stddef.h>
+#include <string.h>
+#include <stdlib.h>
 
 typedef struct	s_list
 {
@@ -29,9 +31,9 @@ int	ft_isalpha(int c);
 int	ft_isascii(int c);
 int	ft_isdigit(int c);
 int	ft_isprint(int c);
-//int ft_toupper(int c);
-//int ft_tolower(int c);
-//int ft_atoi(const char *nptr);
+int ft_toupper(int c);
+int ft_tolower(int c);
+int ft_atoi(const char *nptr);
 
 
 //MEMORY FUNCTIONS
@@ -50,7 +52,7 @@ void	*ft_memset(void *s, int c, size_t n);
 //STRING FUNCTIONS
 size_t	ft_strlcpy( char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
-//size_t	ft_strlcat(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 //char	*ft_strchr(const char *s, int c);
 //char	*ft_strrchr(const char *s, int c);
 //char	*ft_strnstr(const char *big, const char *little, size_t len);

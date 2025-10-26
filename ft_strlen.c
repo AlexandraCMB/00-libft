@@ -1,48 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrunjes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/24 18:35:44 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/10/25 15:34:26 by abrunjes         ###   ########.fr       */
+/*   Created: 2025/10/24 11:17:26 by abrunjes          #+#    #+#             */
+/*   Updated: 2025/10/25 15:34:39 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy( char *dst, const char *src, size_t size)
+size_t	ft_strlen(const char *s)
 {
-	size_t	src_len;
-	size_t	i;
+	int	i;
 
 	i = 0;
-	src_len = 0;
-	while (src[src_len])
-		src_len++;
-	if (size == 0)
-		return (src_len);
-	while (i < size - 1 && src[i])
-	{
-		dst[i] = src[i];
+	while (s[i])
 		i++;
-	}
-	dst[i] = 0;
-	return (src_len);
+	return (i);
 }
-
 /*
 #include <stdio.h>
 
 int main(void)
-{
-	const char *src = "HelloAlex";
-	char dst[50];
-	size_t n = 4;
-
-	printf("Ft_strlcpy output is: %lu\n", ft_strlcpy(dst,src,n));
-	printf("Dest has changed to: %s\n", dst);
-	return 0;
+{	
+	char s[] = "Stars";
+	printf("Length of %s is %li",s,ft_strlen(s));
 }
 */
