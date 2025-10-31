@@ -12,23 +12,10 @@
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+int main ()
 {
-	int	countm;
-	int	num;
-
-	countm = 1;
-	num = 0;
-	while (*nptr == ' ' || *nptr == '+' || *nptr == '-')
-	{
-		if (*nptr == '-')
-			countm *= -1;
-		nptr++;
-	}
-	while (*nptr >= '0' && *nptr <= '9')
-	{
-		num = 10 * num + (*nptr - '0');
-		nptr++;
-	}
-	return (countm * num);
+	const char s[20] = "    --+-3948 ";
+	printf(" Before: %s\n", s);
+	printf(" After: %d\n", ft_atoi(s));
+	return(0);
 }
