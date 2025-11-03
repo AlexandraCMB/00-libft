@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   tft_memcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrunjes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/24 12:42:40 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/03 11:28:22 by abrunjes         ###   ########.fr       */
+/*   Created: 2025/11/03 11:21:39 by abrunjes          #+#    #+#             */
+/*   Updated: 2025/11/03 11:27:50 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+int main (void)
 {
-	unsigned char	*t;
-	size_t			i;
+    unsigned char *d1 = "Copy this";
+    unsigned char *s1;  
 
-	t = (unsigned char *)s;
-	i = 0;
-	while (i < n)
-	{
-		t[i] = (unsigned char) c;
-		i++;
-	}
-	return (s);
+   unsigned char *d2 = "Copy this";
+    unsigned char *s2;  
+
+    printf("Dest is %d ", d1);
+    printf("Src is %d ", d2);
+
+    printf("OG memcpy: %d\n", memcpy(d1,s1,strlen(d1)+1));
+    printf("My memcpy: %d\n", ft_memcpy(d2,s2,strlen(d2+1)))
+
+    
 }
