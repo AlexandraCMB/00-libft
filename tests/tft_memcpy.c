@@ -6,7 +6,7 @@
 /*   By: abrunjes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 11:21:39 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/03 11:27:50 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/03 11:30:56 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main (void)
     printf("Src is %d ", d2);
 
     printf("OG memcpy: %d\n", memcpy(d1,s1,strlen(d1)+1));
-    printf("My memcpy: %d\n", ft_memcpy(d2,s2,strlen(d2+1)))
+    printf("My memcpy: %d\n", ft_memcpy(d2,s2,strlen(d2+1)));
 
     
 }
