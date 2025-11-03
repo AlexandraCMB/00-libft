@@ -6,7 +6,7 @@
 /*   By: abrunjes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 10:05:33 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/03 11:28:22 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/03 11:47:50 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ void *memcpy(void *dest, const void *src , size_t n)
     unsigned char *d;
     unsigned char *s;
 
-    d = (unsigned char *dest);
-    s = (unsigned char *src);
+    d = (unsigned char *)dest;
+    s = (const unsigned char *)src;
 
-    if (dest == NULL)
+    if (dest == NULL && src == NULL)
       return NULL;
 
     while( n > 0)
@@ -29,7 +29,7 @@ void *memcpy(void *dest, const void *src , size_t n)
       n--;
     }
     return (dest);
-  }
+}
 
 
 /*

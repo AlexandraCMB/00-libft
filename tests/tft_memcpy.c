@@ -6,7 +6,7 @@
 /*   By: abrunjes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 11:21:39 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/03 11:30:56 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/03 12:10:32 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,22 @@
 
 int main (void)
 {
-    unsigned char *d1 = "Copy this";
-    unsigned char *s1;  
+    char d1[20];
+    char *s1= "Copy this";  
 
-   unsigned char *d2 = "Copy this";
-    unsigned char *s2;  
+    char d2[20] ;
+    char *s2 = "Copy this";  
 
-    printf("Dest is %d ", d1);
-    printf("Src is %d ", d2);
+    printf("BEFORE COPY: \n")
+    printf("Dest is: %s \n ", d1);
+    printf("Src is: %s \n", s2);
 
-    printf("OG memcpy: %d\n", memcpy(d1,s1,strlen(d1)+1));
-    printf("My memcpy: %d\n", ft_memcpy(d2,s2,strlen(d2+1)));
+    memcpy(d1,s1,strlen(s1)+1);
+    ft_memcpy(d2, s2, strlen(s2)+ 1);
+    
+    print("AFTER COPY: \n");
+    printf("OG memcpy: %s (mem address: %p)\n",), d1, *d1;
+    printf("My memcpy: %p (mem address: %p) \n"), d2, *d2) ;
 
     
 }
