@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abrunjes <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 10:12:54 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/10/26 11:51:58 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/03 19:21:31 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,39 +17,19 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	d;
 	size_t	s;
 	size_t	i;
-	size_t	offset;
 
 	d = ft_strlen(dst);
 	s = ft_strlen(src);
-	offset = d;
 	i = 0;
+	if (!dst || !src)
+		return (0);
 	if (size <= d)
 		return (size + s);
-	while (*(src + i) != '\0')
+	while (src[i] && (d + i) < (size - 1))
 	{
-		*(dst + offset) = *(src + i);
-		offset++;
+		dst[d + i] = src[i];
 		i++;
-		if (offset == size - 1)
-			break ;
 	}
-	*(dst + offset) = '\0';
+	dst[d + i] = '\0';
 	return (s + d);
 }
-/*
-int main(void)
-{
-	const char *src = "Bob";
-	char dst[20] = "Hello";
-	size_t size = 0;
-	while( size <= 10)
-	{
-	strcpy(dst,"Hello");
-	printf("SIZE = %li\n ",size);
-	printf("Starting numbers: src is %s, dest is %s\n", src,dst);
-	printf("Output: %li\n", ft_strlcat(dst,src,size));
-	printf("Catted string: %s\n\n", dst);
-	size++;
-	}
-	return (0);
-}*/

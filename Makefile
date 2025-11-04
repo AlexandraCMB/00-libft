@@ -3,39 +3,47 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: abrunjes <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/22 17:01:36 by abrunjes          #+#    #+#              #
-#    Updated: 2025/10/25 15:50:15 by abrunjes         ###   ########.fr        #
+#    Updated: 2025/11/03 18:31:09 by abrunjes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-AR = ar rsc
 
-CFILRS = test.c \\sort this
-CFLAGS = - Wall -Wextra -Werror 
-OFILES = $(SRCS:.c=.0)
-
-RM = rm -f
+#compiler and flags 
 CC = cc
+CFLAGS = -Wall -Wextra -Werror 
+AR = ar rcs
+RM = rm -f
+INCLUDE = -I.
+ 
+#source files  NTS - fix *.c in sources at end
+SRCS = $(wildcard *.c) 
+OBJS = $(SRCS:.c=.o)
 
-all: $(NAME) clean
+#compile object files > $< INGREDIENT $@ PRODUCT
+%.o:%.c
+	${CC} ${CFLAGS} ${INCLUDE} -c $< -o $@
 
-$(NAME):$(OFILES)
+#main build rule
+all: $(NAME)
 
-clean:
-	rm - f $(OFILES)
-fclean: 
-	rm - f $(NAME)
+#create library  
+$(NAME): $(OBJS)
+	$(AR) $(NAME) $(OBJS)
 
-re: fclean $(NAME)
+#clear object files
+clean: 
+	$(RM) $(OBJS)
+
+#clean objects AND library 
+fclean: clean 
+	 $(RM) $(NAME)
+
+#rebuild!
+re: fclean all
 
 .PHONY: all clean fclean re
-
-clean
-
-fclean
-
-re
-
+# **************************************************************************** #

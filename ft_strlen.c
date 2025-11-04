@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abrunjes <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 11:17:26 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/10/25 15:34:39 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/03 18:58:00 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,3 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
-/*
-#include <stdio.h>
-
-int main(void)
-{	
-	char s[] = "Stars";
-	printf("Length of %s is %li",s,ft_strlen(s));
-}
-*/
