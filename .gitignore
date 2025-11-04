@@ -4,3 +4,4 @@
 *.a
 .vscode
 a.out
+wARMACHINE/*
