@@ -6,46 +6,35 @@
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 16:54:45 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/04 20:22:30 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/05 11:45:38 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
-void		*ft_memmove(void *dest, const void *src, size_t n)
+void *ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char		*d;
-	const unsigned char	*s;
-	size_t i;
-	
+	unsigned char *d;
+	const unsigned char *s;
+
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;
-	i=0;
-	//SOURCE after DEST >>> Copy forward
-	if(d < s)
+	if (s == d)
+		return (dest);
+	if (s < d && s + n > d)
 	{
-		while(i < n)
-		{
-			d[i] = s[i];
-			i++;
-		}
+		while (n--)
+			*(d + n) = *(s + n);
 	}
-	//DEST after SOURCE >>> Copy back
-	if (d > s)
-	{
-		i = n;
-		while(i > 0)
-		{
-			i--;
-			d[i]=s[i];
-		}
-	}
-		return(dest);
+	else
+		while (n--)
+			*d++ = *s++;
+	return (dest);
 }
-/* 
+/*
 int main(void)
 {
- 	char d[] = "0123";
+	char d[] = "0123";
 	char *s = d + 2;
 	size_t n = 0;
 	printf("||SOURCE BEFORE is: %s\n", s);
@@ -61,7 +50,7 @@ int main(void)
 		printf("Src after is: %s\n", s1);
 		printf("Dst after is: %s\n----------\n", d1);
 		n++;
-	} 
+	}
 
 	char ss[] = "0123";
 	char *dd = ss + 2;
