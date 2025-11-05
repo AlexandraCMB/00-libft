@@ -4,3 +4,4 @@
 [submodule "wARMACHINE"]
 	path = wARMACHINE
 	url = https://github.com/0x050f/libft-war-machine.git
+	ignore = all
