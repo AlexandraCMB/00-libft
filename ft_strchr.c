@@ -1,21 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/24 10:58:50 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/05 15:47:11 by abrunjes         ###   ########.fr       */
+/*   Created: 2025/11/05 15:55:25 by abrunjes          #+#    #+#             */
+/*   Updated: 2025/11/05 16:22:31 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+char	*ft_strchr(const char *s, int c)
 {
-	if (c > 31 && c < 127)
-		return (1);
+	char	d;
+
+	d = (char) c;
+	while (*s != d)
+		s++;
+	while (s)
+	{
+		if (*s == d)
+			return ((char *)s);
+		s++;
+	}
+	if (s != NULL)
+		return (NULL);
 	else
-		return (0);
+		return (NULL);
 }
