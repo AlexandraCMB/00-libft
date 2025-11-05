@@ -4,3 +4,5 @@
 [submodule "lIBFTTESTER"]
 	path = lIBFTTESTER
 	url = https://github.com/Tripouille/libftTester.git
+[submodule "wARMACHINE."]
+	ignore = all
