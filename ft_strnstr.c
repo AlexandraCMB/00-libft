@@ -6,7 +6,7 @@
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 12:07:49 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/06 14:57:30 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/06 16:12:59 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,42 +16,22 @@ int	strstrmod(char *h, char *n);
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	const char *bigsub;
-	int i;
-
-	i = 0;
-	
-	
-	if(strstrmod == 1)
-	{
-
-	}	
-}
-
-int	strstrmod(char *h, char *n)
-{
 	int	i;
 	int	j;
 
 	i = 0;
-	if (n[i] == '\0')
-		return (1);
-	while (h[i])
+	j = 0;
+	if (little[i] == '\0')
+		return (big);
+	while (big[i])
 	{
-		if (h[i] == n[0])
-		{
-			j = 0;
-			while (n[j] && h[i + j] == n[j])
+		if (big[i] == little[0] && i < len)
+			while (little[j] && big[i + j] == little[j])
 				j++;
-			if (n[j] == '\0')
-				return (1);
-		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
-
-
 
 /*PLAN()
 Scenario searching
@@ -66,5 +46,6 @@ Scenario searching
 NEEDLE AND HAYSTACK BOTH HAVE TO BE NULL TERMED) - search for 
 n in haystack where haystack is restrict to size of  len 
 - say call it "big sub" if posso return "big"
+^^stupid.. strstr is nearly there .. just add in length restriction
 
 */
