@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   xft_substr.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abrunjes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 15:09:05 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/06 17:00:09 by abrunjes         ###   ########.fr       */
+/*   Created: 2025/10/24 16:09:26 by abrunjes          #+#    #+#             */
+/*   Updated: 2025/10/25 15:32:02 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include "libft.h"
+#include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_bzero(void	*s, size_t n)
 {
-	
+	unsigned char	*t;
+	size_t			i;
+
+	t = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+	{
+		t[i] = 0;
+		i++;
+	}
 }
- */

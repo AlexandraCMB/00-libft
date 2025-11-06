@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   xft_substr.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 15:09:05 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/06 17:00:09 by abrunjes         ###   ########.fr       */
+/*   Created: 2025/10/24 10:58:50 by abrunjes          #+#    #+#             */
+/*   Updated: 2025/11/05 15:47:11 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include "libft.h"
+#include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+int	ft_isprint(int c)
 {
-	
+	if (c > 31 && c < 127)
+		return (1);
+	else
+		return (0);
 }
- */

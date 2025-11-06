@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   xft_substr.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 15:09:05 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/06 17:00:09 by abrunjes         ###   ########.fr       */
+/*   Created: 2025/10/23 21:13:08 by abrunjes          #+#    #+#             */
+/*   Updated: 2025/11/03 18:58:14 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include "libft.h"
+#include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+int	ft_isalnum(int c)
 {
-	
+	if ((c > 64 && c < 91) || (c > 96 && c < 123) || (c > 47 && c < 58))
+		return (1);
+	else
+		return (0);
 }
- */

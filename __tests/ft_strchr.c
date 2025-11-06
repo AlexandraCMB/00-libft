@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   xft_substr.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 15:09:05 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/06 17:00:09 by abrunjes         ###   ########.fr       */
+/*   Created: 2025/11/05 15:55:25 by abrunjes          #+#    #+#             */
+/*   Updated: 2025/11/06 10:50:01 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include "libft.h"
+#include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strchr(const char *s, int c)
 {
-	
+	char	d;
+
+	d = (char) c;
+	while (*s != '\0')
+	{
+		if (*s == d)
+			return ((char *)s);
+		s++;
+	}
+	if (*s == d)
+		return ((char *)s);
+	else
+		return (NULL);
+
 }
- */

@@ -6,7 +6,7 @@
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 18:20:41 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/06 13:00:05 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/06 18:58:55 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void		ft_bzero(void	*s, size_t n);
 void		*ft_memset(void *s, int c, size_t n);
 void		*ft_memcpy(void *dest, const void *src, size_t n);
 void		*ft_memmove(void *dest, const void *src, size_t n);
-//void		*ft_memchr(const void *s, int c, size_t n);
+void		*ft_memchr(const void *s, int c, size_t n);
 //int			ft_memcmp(const void *s1, const void *s2, size_t n);
 
 //MALLOC ALLOWED
