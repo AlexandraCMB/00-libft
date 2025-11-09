@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   tft_memcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abrunjes <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 11:21:39 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/03 16:02:52 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/09 17:09:44 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 int main (void)
 {

@@ -1,37 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   tft_memmove.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 16:54:45 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/05 15:48:22 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/09 17:09:36 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
-{
-	unsigned char		*d;
-	const unsigned char	*s;
-
-	d = (unsigned char *)dest;
-	s = (const unsigned char *)src;
-	if (s == d)
-		return (dest);
-	if (s < d && s + n > d)
-	{
-		while (n--)
-			*(d + n) = *(s + n);
-	}
-	else
-		while (n--)
-			*d++ = *s++;
-	return (dest);
-}
-/*
 int main(void)
 {
 	char d[] = "0123";
@@ -72,4 +52,3 @@ int main(void)
 	return (0);
 }
 
- */

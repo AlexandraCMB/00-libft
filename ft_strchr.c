@@ -6,7 +6,7 @@
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 15:55:25 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/06 10:50:01 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/09 16:54:11 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,4 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	else
 		return (NULL);
-
 }
