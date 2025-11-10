@@ -1,31 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrunjes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/09 20:07:23 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/10 13:14:25 by abrunjes         ###   ########.fr       */
+/*   Created: 2025/11/10 14:46:18 by abrunjes          #+#    #+#             */
+/*   Updated: 2025/11/10 18:12:36 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
-{
-	size_t	size;
-	char	*mall;
-	char	*scheck;
+static int char_in_set(char c, const char *set);
 
-	scheck = (char *)s;
-	if (!s)
-		return (NULL);
-	size = ft_strlen(scheck) + 1;
-	mall = malloc(size * sizeof(char));
-	if (!mall)
-		return (NULL);
-	ft_memcpy(mall, s, size);
-	return (mall);
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	const char *start;
+	const char *end; 
+
+	start = s1;
+	end = s1 + st_strlen(s1) - 1;
+	while(*start && is_in_set(*start, set))
+		start++;
+	while(end >= start && is_in_set(*end,set))
+		end--;
+
+	
+
 }
+
+
+static int is_in_set(char c, const char *set)
+{
+	while(*set != '\0')
+	{
+		if(*set == c)
+			return(1);
+		set++;
+	}
+	return(0);
+} 
 

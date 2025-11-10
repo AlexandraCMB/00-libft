@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   tft_strjoin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrunjes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/09 20:07:23 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/10 13:14:25 by abrunjes         ###   ########.fr       */
+/*   Created: 2025/11/10 14:44:25 by abrunjes          #+#    #+#             */
+/*   Updated: 2025/11/10 14:44:43 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strdup(const char *s)
+int main (void)
 {
-	size_t	size;
-	char	*mall;
-	char	*scheck;
-
-	scheck = (char *)s;
-	if (!s)
-		return (NULL);
-	size = ft_strlen(scheck) + 1;
-	mall = malloc(size * sizeof(char));
-	if (!mall)
-		return (NULL);
-	ft_memcpy(mall, s, size);
-	return (mall);
+	char *s1 = "Hello ";
+	char *s2 = "Alex!";
+	printf("S1 is: '%s', S2 is: '%s'\n",s1,s2);
+	char *a = ft_strjoin(s1,s2);
+	printf("Output: %s\n",a);
+	return (0);
 }
-

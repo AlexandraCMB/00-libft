@@ -6,7 +6,7 @@
 /*   By: abrunjes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 18:20:41 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/09 23:39:34 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/10 14:45:47 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,8 @@ int ft_strncmp(const char *s1, const char *s2, size_t n);
 
 // PART 2 FUNCTIONS
 char 		*ft_substr(char const *s, unsigned int start, size_t len);
-// char 		*ft_strjoin(char const *s1, char const *s2);
-// char 		*ft_strtrim(char const *s1, char const *set);
+char		*ft_strjoin(char const *s1, char const *s2);
+char 		*ft_strtrim(char const *s1, char const *set);
 // char 		**ft_split(char const *s, char c);
 // char 		*ft_itoa(int n);
 // char	 	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
