@@ -6,30 +6,20 @@
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 10:36:17 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/11 15:04:32 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/11 15:15:28 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <limits.h>
+static int	starting_i(int x);
 
 char	*ft_itoa(int n)
 {
 	char	*s;
 	int		i;
-	int		q;
 
-	q = n;
-	i = 0;
-	if (n <= 0)
-		i = 1;
-	printf ("q = %d\n",q);
-	while (q != 0)
-	{
-		q /= 10;
-		i += 1;
-	}
+	i = starting_i(n);
 	s = malloc(sizeof(char) * i + 1 );
 	if (!s)
 		return (NULL);
@@ -44,12 +34,20 @@ char	*ft_itoa(int n)
 	return (s);
 }
 
-int	main(void)
+static int	starting_i(int x)
 {
-	int		x = INT_MIN;
-	char	*y = ft_itoa(x);
-	printf ("Int '%d' to char '%s'\n", x, y);
-	return (0);
-}
+	int	q;
+	int	i;
 
+	q = x;
+	i = 0;
+	if (x <= 0)
+		i = 1;
+	while (q != 0)
+	{
+		q /= 10;
+		i += 1;
+	}
+	return (i);
+}
 
