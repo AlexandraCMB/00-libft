@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abrunjes <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:16:03 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/10 14:44:51 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/11 17:35:30 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,16 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	dest_len = s1_len + s2_len;
-//both empty
 	if (!s1 && !s2)
-		return(ft_strdup(""));
-//malloc
-	dest = malloc( sizeof(char) * (dest_len + 1));
+		return (ft_strdup(""));
+	dest = malloc(sizeof(char) * (dest_len + 1));
 	if (!dest)
-		return(NULL);
-//otherwise would return dest .. char after null
-startdest = dest;
-//joinstrings&output	
-	while(s1_len-- > 0)
-			*dest ++= *s1++;
-	while(s2_len-- > 0)
-			*dest++ = *s2++;
+		return (NULL);
+	startdest = dest;
+	while (s1_len-- > 0)
+		*dest++ = *s1++;
+	while (s2_len-- > 0)
+		*dest++ = *s2++;
 	*dest = '\0';
 	return (startdest);
 }

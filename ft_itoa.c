@@ -6,7 +6,7 @@
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 10:36:17 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/11 15:15:28 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/11 17:34:04 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_itoa(int n)
 	int		i;
 
 	i = starting_i(n);
-	s = malloc(sizeof(char) * i + 1 );
+	s = malloc(sizeof(char) * i + 1);
 	if (!s)
 		return (NULL);
 	*(s + i) = '\0';
@@ -50,4 +50,3 @@ static int	starting_i(int x)
 	}
 	return (i);
 }
-

@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tft_isprint.c                                      :+:      :+:    :+:   */
+/*   tft_strtrim.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/11 16:35:07 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/11 16:35:09 by abrunjes         ###   ########.fr       */
+/*   Created: 2025/11/11 16:33:12 by abrunjes          #+#    #+#             */
+/*   Updated: 2025/11/11 16:33:26 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int main (void)
+int	main(void)
 {
-	int a = 's';
-	int b = 'S';
-	int c = '*';
-	int d = 1;
-	int e = '7';
-	printf("Yes = 1, No = 0\n");
-	printf(" Is %c alpha?:%d \n", a, ft_isprint(a));
-	printf(" Is %c alpha?:%d \n", b, ft_isprint(b));
-	printf(" Is %c alpha?:%d \n", c, ft_isprint(c));
-	printf(" Is %c alpha?:%d \n", d, ft_isprint(d));
-	printf(" Is %c alpha?:%d \n", e, ft_isprint(e));
-	return 0;
+	char	*s1;
+	char	*set;
+	char	*x;
+
+	s1 = "!?!HELLO?!ALEX!!";
+	set = "?!";
+	printf("Trim '%s' by '%s' to get:\n", s1, set);
+	x = ft_strtrim(s1, set);
+	printf("'%s'\n", x);
+	return (0);
 }
+

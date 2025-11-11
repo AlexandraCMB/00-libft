@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   tft_strjoin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abrunjes <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 14:44:25 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/10 14:44:43 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/11 16:35:49 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../libft.h"
 
 int main (void)
 {

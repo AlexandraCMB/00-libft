@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abrunjes <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 20:07:23 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/10 13:14:25 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/11 17:34:32 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,3 @@ char	*ft_strdup(const char *s)
 	ft_memcpy(mall, s, size);
 	return (mall);
 }
-
