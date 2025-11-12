@@ -1,57 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/11 10:36:17 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/12 14:39:07 by abrunjes         ###   ########.fr       */
+/*   Created: 2025/11/12 12:31:41 by abrunjes          #+#    #+#             */
+/*   Updated: 2025/11/12 14:19:53 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	starting_i(int x);
-
-char	*ft_itoa(int n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*s;
-	int		i;
+	char			*res;
+	unsigned int	i;
 
-	i = starting_i(n);
-	s = malloc(sizeof(char) * i + 1);
-	if (!s)
+	res = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!res)
 		return (NULL);
-	*(s + i) = '\0';
-	if (n == 0)
-	{
-		*s = '0';
-		return (s);
-	}
-	while (i--)
-	{
-		*(s + i) = abs(n % 10) + '0';
-		if (i == 0 && *s == '0')
-			*(s + i) = '-';
-		n /= 10;
-	}
-	return (s);
-}
-
-static int	starting_i(int x)
-{
-	int	q;
-	int	i;
-
-	q = x;
 	i = 0;
-	if (x <= 0)
-		i = 1;
-	while (q != 0)
+	while (i < strlen(s))
 	{
-		q /= 10;
-		i += 1;
+		res[i] = f(i, s[i]);
+		i++;
 	}
-	return (i);
+	res[i] = '\0';
+	return (res);
 }

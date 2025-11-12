@@ -6,7 +6,7 @@
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 17:39:06 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/12 12:28:40 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:56:06 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ static int		word_count(char const *s, char c);
 static char		*word_make(char const *s,char c);
 static int		word_len(char const *s, char c);
 static char		**freedom(char **s, int i);
-
-
 
 char	**ft_split(char const *s, char c)
 {
@@ -114,7 +112,7 @@ static char	**freedom(char **s, int i)
 	free(s);
 	return (NULL);
 }
-
+/* 
 int	main (void)
 {
 	int i = 0;
@@ -144,3 +142,4 @@ int	main (void)
 	}
 	return (0);
 }
+ */
