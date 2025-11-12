@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_split-2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 17:39:06 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/12 16:22:07 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/12 16:12:55 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,34 +19,36 @@ static char		**freedom(char **s, int i);
 
 char	**ft_split(char const *s, char c)
 {
-	int		wc;
-	char	**mpointer;
+	char	**arr;
 	int		i;
+	int		j;
 
-	wc = word_count(s, c);
-	mpointer = malloc(sizeof(char *) * (wc + 1));
-	if (!s || !(mpointer))
+	if (!s)
 		return (NULL);
-	i = 0;
-	while (*s)
+	i = word_count(s, c);
+	arr = malloc(sizeof(char *) * (i + 1));
+	if (!arr)
+		return (NULL);
+	j = 0;
+	while (s[j] != '\0')
 	{
-		while (*s == c)
-			s++;
-		if (*s)
+		while (s[j] == c)
+			j++;
+		if (s[j] != '\0')
 		{
-			mpointer[i] = word_make(s, c);
-			if (!mpointer[i])
-				return (freedom(mpointer, i));
+			arr[j] = word_make(s, c);
+			if (!arr[j])
+				return (freedom(arr, j));
 			i++;
 			while (*s && *s != c)
 				s++;
 		}
 	}
-	mpointer[i] = NULL;
-	return (mpointer);
+	arr[j] = NULL;
+	return (arr);
 }
 
-//size to malloc fo **mpointer
+//size to malloc fo **arr
 static int	word_count(char const *s, char c)
 {
 	int	check;
@@ -68,7 +70,8 @@ static int	word_count(char const *s, char c)
 	return (words);
 }
 
-//s here is actuall word. not delimieter!!
+
+//WILL I RID??
 static char	*word_make(char const *s, char c)
 {
 	int		letters;
@@ -110,3 +113,34 @@ static char	**freedom(char **s, int i)
 	free(s);
 	return (NULL);
 }
+/* 
+int	main (void)
+{
+	int i = 0;
+	char *s = "Hello- how,- are- you?";
+	char c = ' ';
+	printf("Before: '%s'\n", s);
+	printf("Delim : '%c'\n", c);
+	printf("After :");
+
+	char **d = ft_split(s, c);
+	if (d)
+	{
+		while (d[i])
+		{
+			printf(" '%s'", d[i]);
+			i++;
+		}
+		printf("\n");
+		i = 0;
+		while (d[i])
+			free(d[i++]);
+		free(d);
+	}
+	else
+	{
+		printf(" NULL\n");
+	}
+	return (0);
+}
+ */
