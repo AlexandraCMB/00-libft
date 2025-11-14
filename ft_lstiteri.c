@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tft_isascii.c                                      :+:      :+:    :+:   */
+/*   ft_lstiteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/24 10:54:30 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/09 17:10:00 by abrunjes         ###   ########.fr       */
+/*   Created: 2025/11/13 13:55:15 by abrunjes          #+#    #+#             */
+/*   Updated: 2025/11/14 15:58:35 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
-int main (void)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	int a = 's';
-	int b = 'S';
-	int c = '*';
-	int d = 1;
-	int e = '7';
-	printf("Yes = 1, No = 0\n");
-	printf(" Is %c alpha?:%d \n", a, ft_isascii(a));
-	printf(" Is %c alpha?:%d \n", b, ft_isascii(b));
-	printf(" Is %c alpha?:%d \n", c, ft_isascii(c));
-	printf(" Is %c alpha?:%d \n", d, ft_isascii(d));
-	printf(" Is %c alpha?:%d \n", e, ft_isascii(e));
-	return 0;
+	if( !lst || !f)
+		return ;
+	while (*lst != NULL)
+	{
+		f(lst->content);
+		lst = lst->content;
+	}
 }
-*/
