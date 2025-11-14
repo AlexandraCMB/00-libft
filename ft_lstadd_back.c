@@ -6,7 +6,7 @@
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 19:25:08 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/14 15:52:16 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/14 16:19:39 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*temp;
 
-	if (!lst || !new)
+	if (!lst || !new )
 		return ;
 	temp = ft_lstlast(*lst);
 	if (*lst == NULL)
