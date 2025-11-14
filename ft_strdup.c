@@ -6,7 +6,7 @@
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 20:07:23 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/11 17:34:32 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/14 14:54:03 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_strdup(const char *s)
 	char	*scheck;
 
 	scheck = (char *)s;
-	if (!s)
-		return (NULL);
 	size = ft_strlen(scheck) + 1;
 	mall = malloc(size * sizeof(char));
 	if (!mall)

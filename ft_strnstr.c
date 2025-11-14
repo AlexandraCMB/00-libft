@@ -6,7 +6,7 @@
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 12:07:49 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/06 18:59:09 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/14 14:52:26 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	i = 0;
 	j = 0;
+	if (len == 0 && !big)
+		return (0);
 	if (little[i] == '\0')
 		return ((char *)big);
 	while (big[i] && i < len)

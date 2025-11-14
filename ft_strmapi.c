@@ -6,7 +6,7 @@
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 12:31:41 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/12 14:19:53 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/14 14:55:15 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!res)
 		return (NULL);
 	i = 0;
-	while (i < strlen(s))
+	while (i < ft_strlen(s))
 	{
 		res[i] = f(i, s[i]);
 		i++;

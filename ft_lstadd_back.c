@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abrunjes <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 19:25:08 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/14 10:10:04 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/14 15:52:16 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	if (!lst || !new)
 		return ;
-
 	temp = ft_lstlast(*lst);
 	if (*lst == NULL)
 	{
