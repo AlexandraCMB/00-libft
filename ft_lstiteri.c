@@ -6,7 +6,7 @@
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 13:55:15 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/14 15:58:35 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/14 17:40:11 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if( !lst || !f)
+	if (!lst || !f)
 		return ;
-	while (*lst != NULL)
+	while (lst != NULL)
 	{
 		f(lst->content);
 		lst = lst->content;
