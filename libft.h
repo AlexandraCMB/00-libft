@@ -6,7 +6,7 @@
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 18:20:41 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/13 16:50:17 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/17 13:06:47 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <string.h>
 # include <stdlib.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
