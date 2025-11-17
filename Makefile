@@ -6,7 +6,7 @@
 #    By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/22 17:01:36 by abrunjes          #+#    #+#              #
-#    Updated: 2025/11/14 15:28:55 by abrunjes         ###   ########.fr        #
+#    Updated: 2025/11/17 15:10:55 by abrunjes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME		=	libft.a
 
 #compiler and flags 
 CC			= 	cc
-CFLAGS		=	-Wall -Wextra -Werror 
+CFLAGS		=	-Wall -Wextra -Werror
 AR			=	ar rcs
 RM			=	rm -f
 INCLUDE		=	-I.
