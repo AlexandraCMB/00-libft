@@ -6,7 +6,7 @@
 /*   By: abrunjes <abrunjes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 19:25:08 by abrunjes          #+#    #+#             */
-/*   Updated: 2025/11/14 17:39:20 by abrunjes         ###   ########.fr       */
+/*   Updated: 2025/11/17 14:24:07 by abrunjes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 	}
 	else
-	{
 		temp->next = new;
-		new->next = NULL;
-	}
 }
